@@ -10,7 +10,7 @@ class ManageDatabase {
       onCreate: (db, version) async {
         // Run the CREATE users TABLE statement on the database.
         await db.execute(
-          'CREATE TABLE users(id TEXT PRIMARY KEY, firstName TEXT, lastName TEXT, fullName TEXT, email TEXT, phone TEXT, username TEXT)',
+          'CREATE TABLE users(id TEXT PRIMARY KEY, firstName TEXT, lastName TEXT, fullName TEXT, email TEXT)',
         );
         return;
       },

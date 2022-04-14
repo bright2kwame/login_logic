@@ -34,18 +34,17 @@ class DBOperations {
       lastName: data['lastName'],
       fullName: data['fullName'],
       email: data['email'],
-      phone: data['phone'],
-      username: data['username'],
     );
   }
 
   //MARK: get user
-  Future<UserItem> getUser() async {
+  Future<UserItem?> getUser() async {
     final db = await ManageDatabase().initialise();
     var queryResult = await db.query('users', limit: 1);
     return parseQueryData(queryResult[0]);
   }
 
+  //MARK: delete user using ID
   Future<void> deleteUser(String id) async {
     // Get a reference to the database.
     final db = await ManageDatabase().initialise();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:typical_login_logic/util/app_resource.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -12,16 +13,13 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Home Now"),
+        title: Text(AppResource.appName),
+        backgroundColor: AppResource.primaryColor,
       ),
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-          ],
+          children: [],
         ),
       ),
     );

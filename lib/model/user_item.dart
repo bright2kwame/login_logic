@@ -4,18 +4,14 @@ class UserItem {
   String lastName = "";
   String fullName = "";
   String email = "";
-  String phone = "";
-  String username = "";
 
-//create a constructor for the user
+//create a constructor for the user item
   UserItem(
       {this.id = "",
       this.firstName = "",
       this.lastName = "",
       this.fullName = "",
-      this.email = "",
-      this.phone = "",
-      this.username = ""});
+      this.email = ""});
 
 //Convert the user to a user map object
   Map<String, dynamic> toMap() {
@@ -24,9 +20,7 @@ class UserItem {
       'firstName': firstName,
       'lastName': lastName,
       'fullName': fullName,
-      'email': email,
-      'phone': phone,
-      'username': username
+      'email': email
     };
   }
 }
