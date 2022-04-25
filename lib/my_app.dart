@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:typical_login_logic/home/home_page.dart';
 import 'package:typical_login_logic/onboard/login_page.dart';
 import 'package:typical_login_logic/onboard/welcome_page.dart';
+import 'package:typical_login_logic/tracking/tracking_usage.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key, required this.isLoggedIn}) : super(key: key);
@@ -14,6 +15,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+      navigatorObservers: <NavigatorObserver>[
+        TrackingUsage().appAnalyticsObserver()
+      ],
       home: const WelcomePage(),
     );
   }
